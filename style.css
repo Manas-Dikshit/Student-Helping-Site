@@ -1,0 +1,166 @@
+/* Dark Neon Theme - Enhanced Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0d0d0d;
+    color: #fff;
+    overflow-x: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.container {
+    background: rgba(20, 20, 20, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+    text-align: center;
+    width: 85%;
+    max-width: 750px;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    color: #00ffff;
+    text-shadow: 0 0 20px #00ffff;
+    font-size: 2.8em;
+    transition: 0.3s;
+    animation: fadeIn 1s ease-in-out;
+}
+
+p {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 2px solid #00ffff;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #ff00ff;
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+button {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+    text-shadow: 0 0 10px #000;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+}
+
+button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 25px #ff00ff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 15px #ff00ff; }
+    50% { box-shadow: 0 0 30px #ff00ff; }
+    100% { box-shadow: 0 0 15px #ff00ff; }
+}
+button:active {
+    animation: glow 0.5s infinite alternate;
+}
+
+#loading-indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ffff;
+    padding: 20px;
+    border-radius: 12px;
+    text-shadow: 0 0 8px #00ffff;
+    box-shadow: 0 0 18px #00ffff;
+    font-size: 1.4em;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 20px #00ffff; }
+    100% { box-shadow: 0 0 35px #ff00ff; }
+}
+
+.feedback-box {
+    background: rgba(20, 20, 20, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.feedback-box h2 {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feedback-box p {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 92%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2.3em;
+    }
+
+    button {
+        font-size: 17px;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    input[type="text"], select {
+        font-size: 14px;
+    }
+}

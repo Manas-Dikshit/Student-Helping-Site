@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Chatbot</title>
+    <link rel="stylesheet" href="chatbot.css">
+    <script defer src="chat.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="Gen-3 Alpha Turbo 3927036945, AI Motion Effects l, DALL·E 2025-03-17 01, M 5.mp4" type="video/mp4">
+    </video>
+
+    <!-- Back Button -->
+    <div class="back-button">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="DALL·E 2025-03-17 01.55.52 - A futuristic AI bot icon designed for a chatbot interface. The design features___- A sleek, modern robot face with glowing blue eyes._- A smooth, roun.webp" alt="Bot" class="bot-avatar">
+            <h2>AI Assistant</h2>
+        </div>
+        <div class="chat-box" id="chat-log">
+            <div class="chat-message bot">
+                <p>Hello! How can I assist you today? 🤖</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-message" placeholder="Type your message...">
+            <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <div id="loading-indicator" style="display: none;">Loading...</div>
+    </div>
+
+    <script>
+        // Back Button Functionality
+        document.querySelector('.back-button').addEventListener('click', () => window.history.back());
+    </script>
+</body>
+</html>

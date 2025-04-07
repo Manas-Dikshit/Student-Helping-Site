@@ -1,0 +1,148 @@
+/* Dark Neon Theme for the Notes page */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 20px rgba(255, 0, 240, 0.5);
+  animation: fadeIn 1s ease-in-out, neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(45deg, #00f0ff, #ff00f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #bbb;
+}
+
+input,
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  background: rgba(0, 240, 255, 0.2); /* Change background color */
+  color: #00f0ff; /* Change text color */
+  outline: none;
+}
+
+/* Change dropdown options color */
+select option {
+  background: #24243e; /* Dark background for dropdown */
+  color: #fff; /* White text */
+}
+
+button {
+  padding: 10px;
+  background: linear-gradient(45deg, #00f0ff, #ff00f0);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 10px rgba(255, 0, 240, 0.5);
+}
+
+.notes-output {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 4px;
+  line-height: 1.6;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 10px rgba(255, 0, 240, 0.5);
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes neonGlow {
+  from {
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 20px rgba(255, 0, 240, 0.5);
+  }
+  to {
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.8), 0 0 30px rgba(255, 0, 240, 0.8);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+      max-width: 100%;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  input,
+  select {
+      padding: 8px;
+  }
+
+  button {
+      padding: 8px;
+  }
+}

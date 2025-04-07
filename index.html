@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZE AI - Choose a Topic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>QUIZZE AI</h1>
+        <p>Enter a topic and your grade level to begin:</p>
+
+        <label for="topic">Enter Your Topic:</label>
+        <input type="text" id="topic" name="topic" placeholder="e.g., Artificial Intelligence">
+
+        <label for="grade-level">Your Grade:</label>
+        <select id="grade-level" name="grade">
+            <option value="elementary">Elementary School</option>
+            <option value="middle">Middle School</option>
+            <option value="high">High School</option>
+            <option value="college">College</option>
+        </select>
+
+        <button id="next-button">Next</button>
+    </div>
+     <div id="loading-indicator" style="display: none;">Loading...</div>
+    <script src="script.js"></script>
+</body>
+</html>

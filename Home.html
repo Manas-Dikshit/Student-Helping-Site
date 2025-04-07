@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mountain Dew AI - Educational Assistant</title>
+    <link rel="stylesheet" href="Home.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <span class="logo-text">SA</span>
+        </div>
+        <ul class="nav-items">
+            <li><a href="login.html">Home</a></li>
+            <li><a href="login.html">About Us</a></li>
+            <li><a href="login.html">Features</a></li>
+            <li><a href="login.html">Chatbot</a></li>
+            <li><a href="login.html" class="login-btn">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to Edu AI</h1>
+            <h2>Your AI Educational Assistant</h2>
+            <p class="tagline">Smart Learning, Smarter Future</p>
+            <button class="cta-button" onclick="location.href='login.html'">Get Started</button>
+        </div>
+        <div class="ai-assistant">
+            <div class="hologram"></div>
+        </div>
+        <div id="particles"></div>
+    </section>
+
+   <!-- Features Section -->
+<section id="features">
+    <h2>Our Features</h2>
+    <div class="features-grid">
+        <a href="login.html" class="feature-card">
+            <div class="icon">📚</div>
+            <h3>AI-Powered Study Notes</h3>
+            <p>Auto-generated AI summaries and topic explanations</p>
+        </a>
+        <a href="login.html" class="feature-card">
+            <div class="icon">🤖</div>
+            <h3>Interactive Chatbot</h3>
+            <p>AI chatbot for study help and motivation</p>
+        </a>
+        <a href="login.html" class="feature-card">
+            <div class="icon">🛤️</div>
+            <h3>Learning Pathways</h3>
+            <p>Custom study roadmaps based on goals</p>
+        </a>
+        <a href="login.html" class="feature-card">
+            <div class="icon">📝</div>
+            <h3>AI Quizzes</h3>
+            <p>Adaptive tests with real-time feedback</p>
+        </a>
+        <a href="login.html" class="feature-card">
+            <div class="icon">⏲️</div>
+            <h3>Pomodoro Timer & Focus Mode</h3>
+            <p>Boost productivity with timed study sessions</p>
+        </a>
+        <a href="login.html" class="feature-card">
+            <div class="icon">🎓</div>
+            <h3>AI Career Guidance</h3>
+            <p>Personalized career advice and planning</p>
+        </a>
+        <a href="login.html" class="feature-card">
+            <div class="icon">🧩</div>
+            <h3>AI Homework Solver</h3>
+            <p>Get help with homework and assignments</p>
+        </a>
+        <a href="login.html" class="feature-card">
+            <div class="icon">💡</div>
+            <h3>Smart Flashcards</h3>
+            <p>Create and review flashcards for efficient learning</p>
+        </a>
+        <a href="login.html" class="feature-card">
+            <div class="icon">📅</div>
+            <h3>Routine Generator</h3>
+            <p>Generate study routines tailored to your schedule</p>
+        </a>
+    </div>
+</section>
+
+    <!-- Chatbot Section -->
+    <section id="chatbot">
+        <div class="chatbot-window">
+            <div class="chat-header">
+                <h3>AI Assistant</h3>
+            </div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Ask me anything...">
+                <button id="sendMessage" onclick="location.href='login.html'">Send</button>
+                <button id="voiceInput" class="voice-btn" onclick="location.href='login.html'">🎤</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview -->
+    <section id="dashboard-preview">
+        <h2>Your Learning Dashboard</h2>
+        <div class="dashboard-container">
+            <div class="stat-card">
+                <h4>Progress</h4>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <h4>Study Streak</h4>
+                <div class="streak">🔥 7 Days</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="login.html" class="social-icon">📱</a>
+                <a href="login.html" class="social-icon">💻</a>
+                <a href="login.html" class="social-icon">📧</a>
+            </div>
+            <div class="newsletter">
+                <input type="email" placeholder="Subscribe to newsletter">
+                <button onclick="location.href='login.html'">Subscribe</button>
+            </div>
+            <p class="copyright">© 2025 Mountain Dew AI</p>
+        </div>
+    </footer>
+
+    <script type="module" src="home.js"></script>
+    <script>
+        // Theme Toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const html = document.documentElement;
+        themeToggle.addEventListener('click', () => {
+            const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        });
+    </script>
+</body>
+</html>

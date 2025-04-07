@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Career Roadmap Generator</title>
+  <link rel="stylesheet" href="stylerd.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Career Roadmap Generator</h1>
+    <p>Choose your dream job and your current academic level to get a detailed roadmap.</p>
+    <form id="roadmap-form">
+      <label for="dream-job">Dream Job:</label>
+      <input type="text" id="dream-job" name="dream-job" placeholder="e.g., Software Engineer" required>
+      
+      <label for="academic-level">Current Academic Level:</label>
+      <select id="academic-level" name="academic-level">
+         <option value="high school">High School</option>
+         <option value="college">College</option>
+         <option value="postgraduate">Postgraduate</option>
+         <option value="professional">Professional</option>
+      </select>
+      
+      <button type="submit">Get Roadmap</button>
+    </form>
+    <div id="loading-indicator" style="display: none;">Loading...</div>
+  </div>
+  <script src="roadmap.js"></script>
+</body>
+</html>

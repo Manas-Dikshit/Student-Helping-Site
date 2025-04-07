@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QUIZZE AI - Detailed Notes</title>
+  <link rel="stylesheet" href="notes.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Noteeee AI</h1>
+    <p>Create detailed notes for your topic</p>
+    <form id="notes-form">      <label for="subject">Subject Name:</label>
+      <input type="text" id="subject" name="subject" placeholder="e.g., Mathematics" required />
+
+      <label for="topic">Topic:</label>
+      <input type="text" id="topic" name="topic" placeholder="e.g., Algebra" required />
+
+      <label for="academic-level">Academic Level:</label>
+      <select id="academic-level" name="academic-level" required>
+        <option value="elementary">Elementary School</option>
+        <option value="middle">Middle School</option>
+        <option value="high">High School</option>
+        <option value="college">College</option>
+      </select>
+
+      <button type="submit" id="generate-button">Generate Notes</button>
+    </form>
+    <div id="loading-indicator" style="display: none;">Loading...</div>
+    <div id="notes-output" class="notes-output"></div>
+  </div>
+  <script src="notes.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* Dark Neon Theme for the Career Guidance page */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 20px rgba(255, 0, 240, 0.5);
+  animation: fadeIn 1s ease-in-out, neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(45deg, #00f0ff, #ff00f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  background: rgba(0, 240, 255, 0.2); /* Change background color */
+  color: #00f0ff; /* Change text color */
+  outline: none;
+}
+
+/* Change dropdown options color */
+select option {
+  background: #24243e; /* Dark background for dropdown */
+  color: #fff; /* White text */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+label {
+  margin-top: 15px;
+  color: #bbb;
+}
+
+input[type="text"], select, textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background: linear-gradient(45deg, #00f0ff, #ff00f0);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 10px rgba(255, 0, 240, 0.5);
+}
+
+#loading-indicator {
+  text-align: center;
+  margin-top: 20px;
+  font-style: italic;
+  color: #00f0ff;
+  animation: blink 1s infinite;
+}
+
+#guidance-result {
+  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 3px;
+  white-space: pre-wrap;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.5;
+  }
+}
+
+@keyframes neonGlow {
+  from {
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 20px rgba(255, 0, 240, 0.5);
+  }
+  to {
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.8), 0 0 30px rgba(255, 0, 240, 0.8);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+      max-width: 100%;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  input[type="text"], select, textarea {
+      padding: 8px;
+  }
+
+  button {
+      padding: 8px;
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script defer src="login.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Back Button -->
+    <button class="back-button">
+        <i class="fas fa-arrow-left"></i> Back
+    </button>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo">
+                <i class="fas fa-user-lock"></i>
+            </div>
+            <h2>Welcome Back</h2>
+            <p>Enter your credentials to access your account</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label for="username">Username</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+
+                <div class="bottom-links">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <a href="#" class="signup">Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* Dark Neon Theme for the Solve page */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 20px rgba(255, 0, 240, 0.5);
+  animation: fadeIn 1s ease-in-out, neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(45deg, #00f0ff, #ff00f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 15px 0;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  font-size: 1rem;
+  resize: vertical;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+button {
+  background: linear-gradient(45deg, #00f0ff, #ff00f0);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 4px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 10px rgba(255, 0, 240, 0.5);
+}
+
+#solution-container {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  white-space: pre-line;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 10px rgba(255, 0, 240, 0.5);
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes neonGlow {
+  from {
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 20px rgba(255, 0, 240, 0.5);
+  }
+  to {
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.8), 0 0 30px rgba(255, 0, 240, 0.8);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+      max-width: 100%;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  textarea {
+      padding: 8px;
+  }
+
+  button {
+      padding: 8px;
+  }
+}

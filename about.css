@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    padding: 100px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#hero-text {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Team Banner */
+.team-banner img {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Team Section */
+.team-card {
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-img {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    background: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.role {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.bio {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Stats Section */
+.stats {
+    background: #eee;
+    padding: 50px 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+}
+
+#send-email {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#send-email:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+}

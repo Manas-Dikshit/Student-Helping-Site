@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QUIZZE AI</title>
+  <link rel="stylesheet" href="flashcard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Flashcard Generator</h1>
+    <p>Enter a topic to generate short notes:</p>
+    <label for="note-topic">Topic:</label>
+    <input type="text" id="note-topic" placeholder="e.g., Climate Change">
+    <button id="generate-note">Generate Notes</button>
+    <div id="loading-indicator" style="display: none;">Loading...</div>
+    <div id="note-result"></div>
+  </div>
+  <script src="flashcard.js"></script>
+</body>
+</html>

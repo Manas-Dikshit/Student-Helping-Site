@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Guidance</title>
+  <link rel="stylesheet" href="careers.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Career Guidance</h1>
+    <p>Please provide the following information to receive career guidance:</p>
+    <form id="career-form">
+      <label for="academic-level">Current Academic Level:</label>
+      <select id="academic-level" name="academic-level">
+        <option value="Elementary School" id="x">Elementary School</option>
+        <option value="Middle School" id="x">Middle School</option>
+        <option value="High School" id="x">High School</option>
+        <option value="College" id="x">College</option>
+        <option value="Graduate Studies" id="x">Graduate Studies</option>
+      </select>
+
+      <label for="favorite-hobby">Favorite Hobby:</label>
+      <input type="text" id="favorite-hobby" name="favorite-hobby" placeholder="e.g., Drawing, Coding, Sports">
+
+      <label for="strange-points">Your Unique Strengths / Interests:</label>
+      <textarea id="strange-points" name="strange-points" placeholder="Describe your strong points or what makes you unique..." rows="4"></textarea>
+
+      <button type="submit" id="submit-career">Get Career Guidance</button>
+    </form>
+    <div id="loading-indicator" style="display: none;">Loading...</div>
+  </div>
+  <script src="careers.js"></script>
+</body>
+</html>

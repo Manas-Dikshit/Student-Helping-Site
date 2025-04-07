@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Pomodoro Timer</title>
+<link rel="stylesheet" href="pomo.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>⏱️ Modern Pomodoro Timer</h1>
+
+    
+
+    <div class="timer-wrapper">
+        <svg width="250" height="250">
+            <circle class="circle" cx="125" cy="125" r="100"></circle>
+            <circle class="progress" cx="125" cy="125" r="100" 
+                stroke-dasharray="628.3" 
+                stroke-dashoffset="628.3">
+            </circle>
+        </svg>
+        <div class="time" id="time">00:00</div>
+    </div>
+
+    <div class="controls">
+        <button class="preset-btn" onclick="startPreset(15)">15 Min</button>
+        <button class="preset-btn" onclick="startPreset(30)">30 Min</button>
+        <button class="preset-btn" onclick="startPreset(60)">60 Min</button>
+
+        <button class="start" onclick="startTimer()">Start</button>
+        <button class="pause" onclick="pauseTimer()">Pause</button>
+        <button class="reset" onclick="resetTimer()">Reset</button>
+        <button class="popup-btn" onclick="togglePopup()">📌 Pop-up</button>
+    </div>
+</div>
+
+<!-- Floating Popup Timer -->
+<div class="popup" id="popup">
+    <div class="popup-header">Timer Widget</div>
+    <div class="popup-time" id="popupTime">00:00</div>
+    <button class="pin-btn" onclick="togglePin()">📌 Pin</button>
+</div>
+
+<script defer src="pomo.js"></script>
+</body>
+</html>

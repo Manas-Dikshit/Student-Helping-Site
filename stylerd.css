@@ -1,0 +1,156 @@
+/* Dark Neon Theme for the Career Guidance page */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 20px rgba(255, 0, 240, 0.5);
+  animation: fadeIn 1s ease-in-out, neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+h1, h2 {
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(45deg, #00f0ff, #ff00f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #bbb;
+}
+
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  color: #bbb;
+}
+
+select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  background: rgba(0, 240, 255, 0.2); /* Change background color */
+  color: #00f0ff; /* Change text color */
+  outline: none;
+}
+
+/* Change dropdown options color */
+select option {
+  background: #24243e; /* Dark background for dropdown */
+  color: #fff; /* White text */
+}
+
+form input[type="text"],
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+form button,
+#back-button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(45deg, #00f0ff, #ff00f0);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+form button:hover,
+#back-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 10px rgba(255, 0, 240, 0.5);
+}
+
+#loading-indicator {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 18px;
+  color: #00f0ff;
+  animation: blink 1s infinite;
+}
+
+.phase-section {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.5;
+  }
+}
+
+@keyframes neonGlow {
+  from {
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 20px rgba(255, 0, 240, 0.5);
+  }
+  to {
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.8), 0 0 30px rgba(255, 0, 240, 0.8);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+      max-width: 100%;
+  }
+
+  h1, h2 {
+      font-size: 1.5rem;
+  }
+
+  form input[type="text"],
+  form select {
+      padding: 8px;
+  }
+
+  form button,
+  #back-button {
+      padding: 8px;
+  }
+}
